@@ -24,14 +24,17 @@ filetype plugin indent on
 colorscheme gruvbox
 set background=dark
 syntax enable
+set scrolloff=6
 set number "shows line numbers
 set cursorline "highlights row that cursor is on
 filetype indent on
 set showmatch "shows matching parens
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-set guioptions -=m "remove menubar
-set guioptions -=T "remove toolbar
+if has("gui_running")
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=0 guibg=lightgrey
+  set guioptions -=m "remove menubar
+  set guioptions -=T "remove toolbar
+endif
 
 "search:
 set incsearch "realtime searching
