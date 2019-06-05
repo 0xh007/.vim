@@ -12,10 +12,21 @@ Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 "format:
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
 set expandtab "spaces > tabs
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+set showmatch           " highlight matching [{()}]
+set foldenable          " enable folding
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" jk is escape
+inoremap jk <esc>
 
 "indent
 filetype plugin indent on
@@ -38,7 +49,6 @@ endif
 
 "search:
 set incsearch "realtime searching
-set ignorecase "ignore caps
 set smartcase "case sensitive if capital letter in query
 
 "lightline
